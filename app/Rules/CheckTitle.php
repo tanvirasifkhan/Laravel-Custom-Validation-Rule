@@ -25,7 +25,7 @@ class CheckTitle implements Rule
      */
     public function passes($attribute, $value)
     {
-        //
+        return ucwords($value)===$value;
     }
 
     /**
@@ -35,6 +35,6 @@ class CheckTitle implements Rule
      */
     public function message()
     {
-        return 'The validation error message.';
+        return 'The :attribute must be a title.';
     }
 }
