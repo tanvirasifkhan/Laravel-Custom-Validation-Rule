@@ -22,21 +22,21 @@
                         @csrf
                         <div class="form-group">
                            <label for="">Title</label>
-                           <input type="text" class="form-control {{ ($errors->has('title'))?'is-invalid':'' }}" name="title" placeholder="Enter title...">
+                           <input type="text" class="form-control {{ ($errors->has('title'))?'is-invalid':'' }}" name="title" value="{{ old('title') }}" placeholder="Enter title...">
                            @if($errors->has('title'))
                               <span class="text-danger">{{ $errors->first('title') }}</span>
                            @endif
                         </div>
                         <div class="form-group">
                            <label for="">Category</label>
-                           <input type="text" class="form-control {{ ($errors->has('category'))?'is-invalid':'' }}" name="category" placeholder="Enter category...">
+                           <input type="text" class="form-control {{ ($errors->has('category'))?'is-invalid':'' }}" name="category" value="{{ old('category') }}" placeholder="Enter category...">
                            @if($errors->has('category'))
                               <span class="text-danger">{{ $errors->first('category') }}</span>
                            @endif
                         </div>
                         <div class="form-group">
                            <label for="">Description</label>
-                           <textarea class="form-control {{ ($errors->has('description'))?'is-invalid':'' }}" name="description" placeholder="Enter description..."></textarea>
+                           <textarea class="form-control {{ ($errors->has('description'))?'is-invalid':'' }}" name="description" value="{{ old('description') }}" placeholder="Enter description..."></textarea>
                            @if($errors->has('description'))
                               <span class="text-danger">{{ $errors->first('description') }}</span>
                            @endif
