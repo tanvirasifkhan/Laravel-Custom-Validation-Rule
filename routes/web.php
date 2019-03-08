@@ -11,4 +11,5 @@
 |
 */
 
-Route::get('/','PostController@create');
+Route::get('/','PostController@create')->name('post.create');
+Route::post('/','PostController@store')->name('post.store');
